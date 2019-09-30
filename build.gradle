@@ -1,0 +1,35 @@
+//group 'org.wls'
+//version '1.0-SNAPSHOT'
+
+
+//sourceCompatibility = 1.8
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+//sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+//    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile 'io.netty:netty-all:4.1.38.Final'
+    compile group: 'commons-cli', name: 'commons-cli', version: '1.4'
+}
+
+
+apply plugin: 'distribution'
+distributions {
+
+    proxy_ss {
+        baseName = 'proxy_ss'
+        mainClassName = 'org.wls.proxy_ss.HexDumpProxy'
+        manifest {
+            attributes 'Main-Class': 'org.wls.proxy_ss.HexDumpProxy'
+        }
+        version '1.0'
+    }
+
+}
