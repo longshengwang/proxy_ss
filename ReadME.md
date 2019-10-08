@@ -14,7 +14,7 @@ usage: proxy-s
  -p,--proxy-uri <arg>    需要代理的URL. 例如: https://210.63.204.29
 ➜  proxy_ss-1.0# bin/proxy_ss -l 1081 -p https://210.63.204.29 -a 127.0.0.1:1086
 ```
-注：由于个人使用，做代理的时候并没有做http header的重新赋值。因此某些场景下无法访问(后台有安全性校验)，比如google和baidu等等
+注：由于个人使用，做代理的时候并没有做http header的重新赋值。因此某些场景下无法访问(后台有安全性校验，主要是HOST验证，防止跨域访问或者代理访问)，比如google和baidu等等
 
 ## 举例
 ```
